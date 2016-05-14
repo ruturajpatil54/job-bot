@@ -9,8 +9,8 @@ const request = require('request');
 const REST_PORT = (process.env.PORT || 5000);
 const APIAI_ACCESS_TOKEN = process.env.APIAI_ACCESS_TOKEN;
 const APIAI_LANG = process.env.APIAI_LANG || 'en';
-const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
-const FB_PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN;
+const FB_VERIFY_TOKEN = 'thisisaserioustoken';
+const FB_PAGE_ACCESS_TOKEN = 'EAAYynecfO5EBAHiO1hXr18E4fagyZAM6aNZAvb438CF0zVG5iVnRO5kF1tUrHUcJBjejPjuAuXq51T8Pbr5rRAQwZAeaIpoLlnVSWl9zXyI9yacMW5Tu8w69kUMOdRComELRuXWziQ9z97OH2L3Dl8ZBC0TBvxeB9ggedfnSJwZDZD';
 
 const apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
 const sessionIds = new Map();
@@ -183,8 +183,8 @@ app.post('/webhook/', function (req, res) {
             status: "ok"
         });
     } catch (err) {
-        return res.status(400).json({
-            "data": {"facebook": "We're working on it!"}
+        return res.status(200).json({
+            "data": {"facebook": "We're working on it! Give us few moments"}
         });
     }
 
