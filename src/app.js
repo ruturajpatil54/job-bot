@@ -184,8 +184,7 @@ app.post('/webhook/', function (req, res) {
         });
     } catch (err) {
         return res.status(400).json({
-            status: "error",
-            error: err
+            "data": {"facebook": "We're working on it!"}
         });
     }
 
