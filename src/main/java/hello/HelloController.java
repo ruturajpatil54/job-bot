@@ -10,7 +10,7 @@ public class HelloController {
     
 	@RequestMapping(method=RequestMethod.POST, value="/webhook")
     public String index(@RequestBody String requestJson ) {
-        return "{\"data\":{\"facebook\":{\"recipient\":{\"id\":\"1348601985160132\"},\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"button\",\"text\":\"What do you want to do next?\",\"buttons\":[{\"type\":\"web_url\",\"url\":\"https://petersapparel.parseapp.com\",\"title\":\"Show Website\"},{\"type\":\"postback\",\"title\":\"Start Chatting\",\"payload\":\"USER_DEFINED_PAYLOAD\"}]}}}}}}";
+        return "{\"data\":{\"facebook\":{\"recipient\":{\"id\":\"1348601985160132\"},\"message\":{\"attachment\":{\"type\":\"template\",\"payload\":{\"template_type\":\"button\",\"text\":\"What do you want to do next?\",\"buttons\":[{\"type\":\"web_url\",\"url\":\"https://www.google.com\",\"title\":\"Show Website\"},{\"type\":\"postback\",\"title\":\"Start Chatting\",\"payload\":\"USER_DEFINED_PAYLOAD\"}]}}}}}}";
     }
     
 }
